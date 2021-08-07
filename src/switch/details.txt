@@ -1,0 +1,16 @@
+
+import { Switch } from 'react-native';
+
+
+<View style={styles.container}>
+
+<Switch
+    value={status}
+    onValueChange={ (valorSelecionado) => setStatus(valorSelecionado) }
+    />
+
+            if de forma condicional, se etiver true vai mostrar Ativo,
+            se estiver false, vai mostrar Inativo
+    <Text> Status: {status ? 'Ativo' : 'Inativo' } </Text>
+
+</View>

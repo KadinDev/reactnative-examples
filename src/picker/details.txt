@@ -1,0 +1,21 @@
+
+Instalação
+//npm add @react-native-community/picker
+
+
+o {carsItems} na linha 52 é a variável let, que está pegando de forma dinâmica os itens
+que estão na const[cars, ...] do useState criada.
+
+
+Dessa forma colocamos de forma manual cara Picker para aparecer em tela,
+da forma explicada acima fazemos de forma dinâmica pegando do array do useState: const[cars, ...] etc...
+
+
+<Picker.Item
+    key={0} // 0 como primeiro item
+    value={0} //tbm pode receber o mesmo Siena 1.6
+    label="Siena 1.6"
+/>
+
+<Picker.Item key={1} value={1} label="Fiat 1.6" />
+<Picker.Item key={2} value={2} label="Gol 1.0" />

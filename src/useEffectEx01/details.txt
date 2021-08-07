@@ -1,0 +1,50 @@
+
+useEffect
+
+//toda vez que o app montar em tela ele chama o que estiver no useEffect,
+  //isso é chamado uma única vez
+  useEffect( () => {
+
+
+    
+    //isso significa que após montado em tela o app, e ao passar dois segundos,
+    //ele vai pegar o setContador e passar o valor de 100 para ele.
+    setTimeout( () => {
+      setContador(100)
+    }, 2000 );
+
+  }, [] );
+
+=============================
+const [render, setRender] = useState(true);
+
+<View style={styles.container}>
+
+    <Button title="Aumentar" onPress={ () => setContador(contador + 1) } />
+    
+    <Text style={{fontSize: 20}}> {contador} </Text>
+    
+    <Button title="Diminuir" onPress={ () => setContador(contador - 1) } />
+
+    como só terá a condição true aqui desse modo já passa direto
+    && = significa que está true e vai renderizar, se estiver false não vai
+    { render && <Nome/> }
+
+</View>
+
+function Nome(){
+
+  useEffect( () => {
+    console.log('Componente nome foi montado na tela')
+
+
+
+    // esse modelo significa que ele só será chamado quando o componente
+    //for desmontado na tela
+    return () => {console.log('Componente desmontado')}
+  }, [] )
+
+  <Button title="Esconder Nome" onPress={ () => setRender(false)}/>
+
+  return <Text style={{marginTop: 20}}> RICARDO </Text>
+}

@@ -1,0 +1,3 @@
+instalação
+essa criará o navigation em baixo, no bottom
+npm install @react-navigation/bottom-tabs@^5.x

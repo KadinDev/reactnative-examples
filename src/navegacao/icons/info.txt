@@ -1,0 +1,49 @@
+- instalando biblioteca dos icons -
+
+documentação:
+https://github.com/oblador/react-native-vector-icons
+
+List de ícons:
+https://oblador.github.io/react-native-vector-icons/
+
+npm install react-native-vector-icons
+
+após isso instalar no iOS caso vc esteja no iOS
+vai em Info.plist
+e cola todas as bibliotecas:
+
+<key>UIAppFonts</key>
+<array>
+  <string>AntDesign.ttf</string>
+  <string>Entypo.ttf</string>
+  <string>EvilIcons.ttf</string>
+  <string>Feather.ttf</string>
+  <string>FontAwesome.ttf</string>
+  <string>FontAwesome5_Brands.ttf</string>
+  <string>FontAwesome5_Regular.ttf</string>
+  <string>FontAwesome5_Solid.ttf</string>
+  <string>Foundation.ttf</string>
+  <string>Ionicons.ttf</string>
+  <string>MaterialIcons.ttf</string>
+  <string>MaterialCommunityIcons.ttf</string>
+  <string>SimpleLineIcons.ttf</string>
+  <string>Octicons.ttf</string>
+  <string>Zocial.ttf</string>
+  <string>Fontisto.ttf</string>
+</array>
+
+cola tudo antes do 
+</dict>
+</plist>
+
+===============================
+
+agora para o android
+vai em android / app / src / build.gradle
+e cola antes do último aplly from ...
+
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' ] // Name of the font files you want to copy
+]
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"

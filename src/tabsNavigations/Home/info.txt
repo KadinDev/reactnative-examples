@@ -1,0 +1,8 @@
+instalação
+yarn add @react-navigation/native
+
+somente se estiver fazendo o projeto com expo
+expo install react-native-screens react-native-safe-area-context
+
+somente se estiver fazendo o projeto com reactnative
+yarn add react-native-screens react-native-safe-area-context
